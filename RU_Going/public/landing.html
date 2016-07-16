@@ -1,23 +1,99 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<!DOCTYPE html>
+<html>
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
+<head>
+    <title>A Penny Saved - Track Eating Out Expenses, Save Money</title>
+    <meta name="description" content="A quick and easy way to save money by tracking what you've spent on food throughout your day">
+    <link rel="apple-touch-icon" sizes="57x57" href="fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+    <link rel="manifest" href="fav/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="animate.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <!-- amCharts javascript sources -->
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.amcharts.com/lib/3/pie.js"></script> -->
+    <script type="text/javascript" src="/js/pie.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+</head>
 
-    <body>
-
-    <div class="row">
-      <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
-<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
+<body>
+    <div id="body" class="intro z-depth-2">
+        <div id="title">
+            R.U. Going?
+        </div>
+        <div class="row">
+            <!--  <nav id="userbar"> -->
+            <!-- <div class="nav-wrapper"> -->
+            <div class="row">
+                <form class="col s6 offset-s3">
+                    <div class="input-field">
+                        <input class="userinput" id="UI" type="text">
+                        <label for="UI">Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input id="password" type="password">
+                        <label for="password">Password</label>
+                    </div>
+                </form>
+            </div>
+            <!-- </nav> -->
+        </div>
+        <!-- first set of buttons -->
+        <br>
+        <a id="login" type="submit" class="waves-effect waves-light btn"><i class="material-icons left">input</i>LOGIN</a>
+        <a id="register" class="waves-effect waves-light btn"><i class="material-icons right">supervisor_account</i>REGISTER</a>
+        <!-- second set of buttons -->
     </div>
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-    </body>
-  </html>
+    <div class="row" id="descriptionArea">
+        <H3> R.U. Going is Doap </H1>
+        <div class="col s12 m4 l4">
+            <H5> Create an Event </H2> 
+               <i class="large material-icons">today</i>
+        </div>   
+         <div class="col s12 m4 l4">
+            <H5> Create and find meetups based on what you want to do, then meet new people that share similar interests. </H2>
+        </div>
+        <div class="col s12 m4 l4">    
+            <H5> Meet Up </H2>
+           <i class="large material-icons">today</i>
+        </div>
+       
+
+    </div>
+    
+    <br>
+    <!-- jQuery is required by Materialize to function -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script type="text/javascript" src="/js/custom.js"></script>
+<!--Date Picker requires -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <!-- <script src="//code.jquery.com/jquery-1.10.2.js"></script> -->
+     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+</body>
+
+</html>

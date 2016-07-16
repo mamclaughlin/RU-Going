@@ -25,58 +25,49 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-    <link rel="stylesheet" href="animate.css">
-    <link type="text/css" rel="stylesheet" href="./assets/css/materialize.min.css">
-</script>
+    <link type="text/css" rel="stylesheet" href="./assets/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/style.css">
+    <!-- amCharts javascript sources -->
+
 </head>
 
 <body>
-    <div id="body" class="intro z-depth-2">
-        <div id="title">
-            R.U. Going?
-        </div>
-        <div class="row">
-            <!--  <nav id="userbar"> -->
-            <!-- <div class="nav-wrapper"> -->
-            <div class="row">
-                <form class="col s6 offset-s3">
-                    <div class="input-field">
-                        <input class="userinput" id="UI" type="text">
-                        <label for="UI">Email</label>
-                    </div>
-                    <div class="input-field">
-                        <input id="password" type="password">
-                        <label for="password">Password</label>
-                    </div>
-                </form>
-            </div>
-            <!-- </nav> -->
-        </div>
-        <!-- first set of buttons -->
-        <br>
-        <a id="login" type="submit" class="waves-effect waves-light btn"><i class="material-icons left">input</i>LOGIN</a>
-        <a id="register" class="waves-effect waves-light btn"><i class="material-icons right">supervisor_account</i>REGISTER</a>
-        <!-- second set of buttons -->
-    </div>
-    <div class="row" id="descriptionArea">
-        <H3> R.U. Going is Doap </H1>
-        <div class="col s12 m4 l4">
-            <H5> Create an Event </H2> 
-               <i class="large material-icons">today</i>
-        </div>   
-         <div class="col s12 m4 l4">
-            <H5> Create and find meetups based on what you want to do, then meet new people that share similar interests. </H2>
-        </div>
-        <div class="col s12 m4 l4">    
-            <H5> Meet Up </H2>
-           <i class="large material-icons">today</i>
-        </div>
-       
 
-    </div>
-    
-    <br>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="" id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+          <label for="disabled">Colors</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+    </form>
+  </div>
+        
+
+
     <!-- jQuery is required by Materialize to function -->
     <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->

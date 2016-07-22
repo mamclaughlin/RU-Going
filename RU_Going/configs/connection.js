@@ -7,7 +7,6 @@ var Sequelize = require("sequelize");
 
 // Lists out connection options
 var source = {
-
     localhost: {
         port: 3306,
         host: 'localhost',

@@ -39,6 +39,8 @@ dbm.once('open', function () {
 
 
 
+
+
 //Routes Pushing to MongoDB
 app.get('/api/entries', function(req, res) {
         // use mongoose to get all todos in the database

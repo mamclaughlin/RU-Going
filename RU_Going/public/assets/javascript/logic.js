@@ -160,48 +160,4 @@ messagesRef.limitToLast(10).on('child_added', function(snapshot) {
 
 });
 
-//Aaron's pie chart
-// Load the Visualization API and the piechart package.
-google.load('visualization', '1.0', { 'packages': ['corechart'] });
 
-// Set a callback to run when the Google Visualization API is loaded.
-google.setOnLoadCallback(drawChart);
-
-// Callback that creates and populates a data table,
-// instantiates the pie chart, passes in the data and
-// draws it.
-function drawChart() {
-
-    // Create the data table.
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Topping');
-    data.addColumn('number', 'Slices');
-    data.addRows([
-        ['College Ave.', 23],
-        ['Busch', 10],
-        ['Cook/Douglass', 12],
-        ['Livingston', 19]
-    ]);
-
-    // Set chart options
-    var options = {
-        width: 400,
-        height: 240,
-        // title: 'Where\'s the action?',
-        colors: ['red', '#2f2f2f', 'grey', 'lightgrey'],
-        is3D: true,
-        backgroundColor: 'black',
-        pieSliceText: 'value',
-        titleTextStyle: {
-            color: 'white',
-            fontSize: 20,
-            bold: false,
-            italic: false
-        },
-        legend: { position: 'right', textStyle: { color: 'white', fontSize: 12 } }
-    };
-
-    // Instantiate and draw our chart, passing in some options.
-    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-    chart.draw(data, options);
-}

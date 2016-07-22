@@ -1,0 +1,276 @@
+<!-- http://meet-you-there.herokuapp.com/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
+	<!-- HTML Magic -->
+	<meta charset="UTF-8">
+	<!-- iPhone Optimization -->
+	<!-- App Icon Image -->
+	<link rel="apple-touch-icon" href="assets/images/icon.jpg">
+	<!-- Allows application to become a mobile app -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- Stops user from being able to double-tap zoom -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>RU Going?</title>
+
+	<!-- Resource CSS -->
+	<link rel="stylesheet" href="libs/materialize/dist/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="libs/animate.css/animate.min.css">
+
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+	<link type="text/css" rel="stylesheet" href="./assets/css/materialize.min.css">
+	<link type="text/css" rel="stylesheet" href="./assets/css/landing.css">
+
+
+
+</head>
+
+<body>
+<!-- Container -->
+<div class="container">
+	<br>
+	<br>
+	<!-- R U Going Header -->
+	<h1 align="center" id="homeButton" class="animated slideInDown"><img src="assets/images/rutgers.png" height="auto" width="10%">U Going?</h1>
+	<span><div class="animated slideInDown" id="weather"></div></span>
+	<br>
+	<br>
+</div>
+<!-- Container for search or create prompt #findButton #createButton -->
+<div id="welcomeCenter" align="center">
+	<a href="#" class="btn btn-default btn-lg btn-block animated fadeInDown" id="findButton" data-toggle="modal" data-target="#findSection">Find a Hangout!</a>
+	<br>
+	<br>
+	<a href="#" class="btn btn-default btn-lg btn-block animated fadeInDown" id="createButton" data-toggle="modal" data-target="#createSection">Create Your Own!</a>
+	<br>
+	<br>
+	<!-- <img src="assets/images/welcome.png"> -->
+	<div>
+		<a href="#" id="random" class="btn btn-default btn-lg btn-block animated fadeInDown">Random NB Deal!</a>
+		<div id="sqoot"></div>
+	</div>
+</div>
+<!-- Container for Create -->
+<!-- MODAL. USE THIS. -->
+<div id="createSection" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<!-- <button type="button" class="close" align="right" data-dismiss="modal">&times;</button> -->
+				<h4 class="modal-title animated fadeInDown" align="center">Create Your Event</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<!-- <div class="addEventForm"> -->
+					<label class="control-label animated fadeInDown" for="focusedInput">Event Info:</label>
+					<div class="infoOneLine">
+						<div class="oneLine" style="margin-left: 0;">
+							<input class="form-control eventName animated fadeInDown" id="focusedInput" type="text" value="" placeholder="Event Name">
+						</div>
+						<!-- end event name -->
+						<div class="oneLine">
+							<label class="control-label animated fadeInDown" for="focusedInput"></label>
+							<input class="form-control eventDate animated fadeInDown" id="focusedInput" type="date" value="" placeholder="Date">
+						</div>
+						<!-- end Date input -->
+						<div class="oneLine">
+							<label class="control-label animated fadeInDown" for="focusedInput"></label>
+							<input class="form-control eventTime animated fadeInDown" id="focusedInput" type="time" value="" placeholder="Time">
+						</div>
+						<!-- end Time input -->
+					</div>
+					<!-- end oneLine, this will make it so these 3 boxes appear on one line -->
+				</div>
+				<!-- end addEventForm -->
+				<label for="select">What category best describes your event?</label>
+				<div class="form-group animated fadeInDown">
+					<select class="form-control eventCat">
+						<option>Bars</option>
+						<option>Food</option>
+						<option>Hangout</option>
+						<option>Jam Session</option>
+						<option>Movies</option>
+						<option>Sports</option>
+						<option>Study</option>
+					</select>
+				</div>
+				<br>
+				<label for="select">Where is your event located?</label>
+				<div class="form-group animated fadeInDown">
+					<select class="form-control eventLocation">
+						<option>Busch</option>
+						<option>College Avenue</option>
+						<option>Douglass</option>
+						<option>Cook</option>
+						<option>Livingston</option>
+						<option>Off-campus</option>
+					</select>
+				</div>
+				<br>
+				<label class="control-label animated fadeInDown" for="focusedInput">Tell us about it:</label>
+				<textarea class="form-control eventDescription animated fadeInDown" id="focusedInput" type="text" value="" placeholder="What's going down?"></textarea>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" id="addEvent" class="btn btn-default animated bounce">Add Event</button>
+				<br>
+				<br>
+				<button type="button" class="close" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Container for Find -->
+<div id="findSection" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<!-- <button type="button" id="close" class="close" data-dismiss="modal">&times;</button> -->
+				<h4 class="modal-title animated fadeInDown" align="center">Find Your Event</h4>
+			</div>
+			<div class="modal-body">
+				<label for="select" class="animated fadeInDown">Which campus would you like to visit?</label>
+				<div class="form-group animated fadeInDown">
+					<select class="form-control eventLocation" id="selectLocation">
+						<option>Busch</option>
+						<option>College Avenue</option>
+						<option>Cook</option>
+						<option>Douglass</option>
+						<option>Livingston</option>
+						<option>Off-campus</option>
+					</select>
+				</div>
+				<br>
+				<label for="select" class="animated fadeInDown">What would you like to do?</label>
+				<div class="form-group animated fadeInDown">
+					<select class="form-control eventCat" id="selectCategory">
+						<option>Bars</option>
+						<option>Food</option>
+						<option>Hangout</option>
+						<option>Jam Session</option>
+						<option>Movies</option>
+						<option>Sports</option>
+						<option>Study</option>
+					</select>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" id="findEvent" class="btn btn-default animated bounce">Find Event</button>
+				<br>
+				<br>
+				<button type="button" class="close" class="btn btn-default" data-dismiss="modal">Close</button>
+				<!--             <button type="button" id="closeEvent" class="btn btn-default" data-dismiss="modal">Close</button>
+   -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ^Container for Find -->
+<!-- Container for event divs #eventDiv -->
+<div id="eventDiv" class="animated slideInDown">
+	<div class="row">
+		<!-- CHAT GOES HERE. -->
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+				<div id="chat-container">
+					<header>RU Going? Chat</header>
+					<div id="menu">
+					</div>
+					<div class='chat-menu'>
+						<label for="nameInput" class="username">Username:</label>
+						<input type='text' id='nameInput' placeholder='Enter a Username...'>
+						<ul id='messages' class="chat-messages"></ul>
+						<label for="nameInput" class="messages">Message:</label>
+						<input type='text' id='messageInput' placeholder='Type a Message...'>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+				<div id="testdiv" class="animated fadeInDown">
+					<!-- Things show here -->
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+				<div id="twitter">
+					<!-- <h4>See What's Making News</h4> -->
+					<a class="twitter-timeline" href="https://twitter.com/hashtag/RU_Going" data-widget-id="710949422897692672">#RU_Going</a>
+					<br>
+					<br>
+					<script>
+						! function(d, s, id) {
+							var js, fjs = d.getElementsByTagName(s)[0],
+									p = /^http:/.test(d.location) ? 'http' : 'https';
+							if (!d.getElementById(id)) {
+								js = d.createElement(s);
+								js.id = id;
+								js.src = p + "://platform.twitter.com/widgets.js";
+								fjs.parentNode.insertBefore(js, fjs);
+							}
+						}(document, "script", "twitter-wjs");
+					</script>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+
+
+	<form class="col s6 offset-s3">
+		<div class="input-field">
+			<input class="userinput" id="UI" type="text">
+			<label for="UI">Email</label>
+		</div>
+		<div class="input-field">
+			<input id="password" type="password">
+			<label for="password">Password</label>
+		</div>
+	</form>
+
+
+	<!-- </nav> -->
+</div>
+<!-- first set of buttons -->
+<br>
+<div class="center-align">
+	<a id="login" type="submit" class=" red darken-2 center-align waves-effect waves-light btn"><i class="material-icons left">input</i>LOGIN</a>
+	<a id="register" class="red darken-2 center-align waves-effect waves-light btn"><i class="material-icons right">supervisor_account</i>REGISTER</a>
+</div>
+<!-- End of row -->
+<!-- End of eventDiv -->
+<!-- ^Container -->
+<!-- Nav Buttons -->
+<!-- Footer -->
+<!-- <footer class="aimated stretchIn">&copy; Ninth Productions</footer> -->
+
+<!-- JS -->
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular-route/angular-route.min.js"></script>
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/materialize/dist/js/materialize.min.js"></script>
+
+<!-- Angular Files -->
+<script src="assets/javascript/app/app.js"></script>
+
+<script src="assets/javascript/logic.js"></script>
+<script src="assets/javascript/javascript.js"></script>
+</body>
+
+</html>

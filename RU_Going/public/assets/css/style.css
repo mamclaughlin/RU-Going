@@ -1,322 +1,322 @@
-body {
-    background-color: black;
-    width: 100%;
-}
+/*body {*/
+    /*background-color: black;*/
+    /*width: 100%;*/
+/*}*/
 
-footer {
-    position: fixed;
-    padding-top: 20px;
-    bottom: 5px;
-    width: 100%;
-    font-size: 10px;
-    text-align: center;
-}
+/*footer {*/
+    /*position: fixed;*/
+    /*padding-top: 20px;*/
+    /*bottom: 5px;*/
+    /*width: 100%;*/
+    /*font-size: 10px;*/
+    /*text-align: center;*/
+/*}*/
 
-h1 {
-    font-family: 'Paytone One', sans-serif;
-    cursor: pointer;
-}
+/*h1 {*/
+    /*font-family: 'Paytone One', sans-serif;*/
+    /*cursor: pointer;*/
+/*}*/
 
-#backButton {
-    background-color: white;
-    color: black;
-}
-
-
-#eventDiv {
-    text-align: center;
-}
-
-#eventDiv img {
-    width: 100%;
-    height: auto;
-}
-
-#eventHeader {
-    text-align: center;
-}
-
-#eventJoin {
-    background-color: #ff0000;
-}
-
-#eventSubmit {
-    background-color: #ff0000;
-}
-
-#findButton, #createButton, #random {
-    background-color: #ff0000;
-    font-size: 25px;
-    width: 65%;
-}
-
-#createSection {
-    position: fixed;
-    top: 20px;
-}
-
-#findSection {
-    position: fixed;
-    top: 25%;
-}
-
-#forwardButton {
-    background-color: white;
-    color: black;
-}
-
-#goButton {
-    background-color: #ff0000;
-    font-size: 25px;
-}
-
-#navButtons {
-    position: fixed;
-    bottom: 30px;
-    width: 100%;
-    margin-top: 20px;
-}
-
-#join {
-    text-align: center;
-    background-color: red;
-    width: 40%;
-    font-size: 100%;
-}
-
-#buttonWell {
-    text-align: center;
-}
-
-#pieHeader {
-    font-family: 'Paytone One', sans-serif;
-    font-size: 25px;
-}
-
-#weather img {
-    width: 40px;
-}
-
-#welcomeCenter img {
-    width: 25%;
-    height: auto;
-    text-align: center;
-}
+/*#backButton {*/
+    /*background-color: white;*/
+    /*color: black;*/
+/*}*/
 
 
-/*Mariah's CSS*/
+/*#eventDiv {*/
+    /*text-align: center;*/
+/*}*/
 
-.infoOneLine {
-    width: 100%;
-    clear: right;
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-}
+/*#eventDiv img {*/
+    /*width: 100%;*/
+    /*height: auto;*/
+/*}*/
 
-.oneLine {
+/*#eventHeader {*/
+    /*text-align: center;*/
+/*}*/
+
+/*#eventJoin {*/
+    /*background-color: #ff0000;*/
+/*}*/
+
+/*#eventSubmit {*/
+    /*background-color: #ff0000;*/
+/*}*/
+
+/*#findButton, #createButton, #random {*/
+    /*background-color: #ff0000;*/
+    /*font-size: 25px;*/
+    /*width: 65%;*/
+/*}*/
+
+/*#createSection {*/
+    /*position: fixed;*/
+    /*top: 20px;*/
+/*}*/
+
+/*#findSection {*/
+    /*position: fixed;*/
+    /*top: 25%;*/
+/*}*/
+
+/*#forwardButton {*/
+    /*background-color: white;*/
+    /*color: black;*/
+/*}*/
+
+/*#goButton {*/
+    /*background-color: #ff0000;*/
+    /*font-size: 25px;*/
+/*}*/
+
+/*#navButtons {*/
+    /*position: fixed;*/
+    /*bottom: 30px;*/
+    /*width: 100%;*/
+    /*margin-top: 20px;*/
+/*}*/
+
+/*#join {*/
+    /*text-align: center;*/
+    /*background-color: red;*/
+    /*width: 40%;*/
+    /*font-size: 100%;*/
+/*}*/
+
+/*#buttonWell {*/
+    /*text-align: center;*/
+/*}*/
+
+/*#pieHeader {*/
+    /*font-family: 'Paytone One', sans-serif;*/
+    /*font-size: 25px;*/
+/*}*/
+
+/*#weather img {*/
+    /*width: 40px;*/
+/*}*/
+
+/*#welcomeCenter img {*/
+    /*width: 25%;*/
+    /*height: auto;*/
+    /*text-align: center;*/
+/*}*/
+
+
+/*!*Mariah's CSS*!*/
+
+/*.infoOneLine {*/
+    /*width: 100%;*/
+    /*clear: right;*/
+    /*height: 70px;*/
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*margin: 0 auto;*/
+/*}*/
+
+/*.oneLine {*/
+    /*!*float: left;*!*/
+    /*!*display: inline-block;*!*/
+    /*max-width: 30%;*/
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*margin: 0 auto;*/
+/*}*/
+
+/*#createEventForm {*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*padding: 20px;*/
+    /*background-color: darkgray;*/
+/*}*/
+
+/*#addEvent {*/
+    /*width: 100%;*/
+    /*background-color: #ff0000;*/
+    /*font-size: 20px;*/
+/*}*/
+
+/*#findEvent {*/
+    /*width: 100%;*/
+    /*background-color: #ff0000;*/
+    /*font-size: 20px;*/
+/*}*/
+
+/*.close {*/
+    /*width: 100%;*/
+/*}*/
+
+/*#wellContent {*/
+    /*line-height: 300%;*/
+/*}*/
+
+/*.well {*/
     /*float: left;*/
-    /*display: inline-block;*/
-    max-width: 30%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-}
 
-#createEventForm {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    background-color: darkgray;
-}
+    /*margin-right: 15px;*/
+    /*line-height: 300%;*/
 
-#addEvent {
-    width: 100%;
-    background-color: #ff0000;
-    font-size: 20px;
-}
+/*}*/
 
-#findEvent {
-    width: 100%;
-    background-color: #ff0000;
-    font-size: 20px;
-}
+/*.required sup {*/
+    /*color: red;*/
+/*}*/
 
-.close {
-    width: 100%;
-}
+/*#eventDescription {*/
+    /*text-wrap: normal;*/
+    /*margin-bottom: 12px;*/
+    /*padding-left: 10px;*/
+    /*padding-right: 10px;*/
+/*}*/
 
-#wellContent {
-    line-height: 300%;
-}
+/*#eventDate {*/
+    /*text-align: center;*/
+    /*margin-bottom: 12px;*/
+/*}*/
 
-.well {
-    float: left;
+/*#category {*/
+    /*margin-top: 12px;*/
+    /*padding-bottom: 7px;*/
+    /*padding-left: 10px;*/
+    /*padding-right: 10px;*/
+    /*text-align: center;*/
 
-    margin-right: 15px;
-    line-height: 300%;
+/*}*/
 
-}
+/*#location , #eventTime {*/
+    /*margin-left: 10px;*/
+/*}*/
 
-.required sup {
-    color: red;
-}
+/*.glyphicon-remove {*/
+    /*float: right;*/
+    /*background-color: black;*/
+    /*border-radius: 3px;*/
+    /*!*padding: 4px;*!*/
+    /*z-index: 1;*/
+    /*width: 25px;*/
+    /*height: 25px;*/
+    /*text-align: center;*/
+    /*vertical-align: middle;*/
+    /*margin: 5px;*/
+    /*cursor:pointer;*/
+/*}*/
 
-#eventDescription {
-    text-wrap: normal;
-    margin-bottom: 12px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
+/*.glyphicon-remove:hover {*/
+    /*background-color: #403e3e;*/
+/*}*/
 
-#eventDate {
-    text-align: center;
-    margin-bottom: 12px;
-}
+/*#twitter {*/
+  /*width: 100%;*/
+/*}*/
 
-#category {
-    margin-top: 12px;
-    padding-bottom: 7px;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: center;
+/*#eventName {*/
+    /*background-color: #ae2929;*/
+    /*padding: 5px;*/
+    /*width: 100%;*/
+    /*text-align: center;*/
+    /*border-radius: 5px;*/
+    /*margin-bottom: 12px;*/
+/*}*/
 
-}
-
-#location , #eventTime {
-    margin-left: 10px;
-}
-
-.glyphicon-remove {
-    float: right;
-    background-color: black;
-    border-radius: 3px;
+/*.glyphicon {*/
     /*padding: 4px;*/
-    z-index: 1;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    vertical-align: middle;
-    margin: 5px;
-    cursor:pointer;
-}
+/*}*/
 
-.glyphicon-remove:hover {
-    background-color: #403e3e;
-}
+/*!*Leslie's css*!*/
 
-#twitter {
-  width: 100%;
-}
-
-#eventName {
-    background-color: #ae2929;
-    padding: 5px;
-    width: 100%;
-    text-align: center;
-    border-radius: 5px;
-    margin-bottom: 12px;
-}
-
-.glyphicon {
-    padding: 4px;
-}
-
-/*Leslie's css*/
-
-#chat-container,
-#loginform {
-    margin: 0 auto;
-    /*    padding-bottom:25px;
-*/
-    background: gray;
-    opacity: ;
-    width: 100%;
-    height: 370px;
-    border: 3px solid white;
-    /*margin-top:50px;
-    margin-bottom:50px;
-    float:center;
-    margin-right:10px;*/
-    text-align: center;
-}
+/*#chat-container,*/
+/*#loginform {*/
+    /*margin: 0 auto;*/
+    /*!*    padding-bottom:25px;*/
+/**!*/
+    /*background: gray;*/
+    /*opacity: ;*/
+    /*width: 100%;*/
+    /*height: 370px;*/
+    /*border: 3px solid white;*/
+    /*!*margin-top:50px;*/
+    /*margin-bottom:50px;*/
+    /*float:center;*/
+    /*margin-right:10px;*!*/
+    /*text-align: center;*/
+/*}*/
 
 
-/*#loginform { padding-top:18px; }
+/*!*#loginform { padding-top:18px; }*/
 
-    #loginform p { margin: 5px; }*/
+    /*#loginform p { margin: 5px; }*!*/
 
-#username {
-    color: white;
-    text-align: center;
-    padding: 10px;
-    /*border:1px solid black;*/
-}
+/*#username {*/
+    /*color: white;*/
+    /*text-align: center;*/
+    /*padding: 10px;*/
+    /*!*border:1px solid black;*!*/
+/*}*/
 
-.chat-messages {
-    text-align: left;
-    margin: 0 auto;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding: 10px;
-    background: white;
-    height: 200px;
-    width: 100%;
-    border: 1px solid black;
-    overflow: auto;
-    color: black;
-}
+/*.chat-messages {*/
+    /*text-align: left;*/
+    /*margin: 0 auto;*/
+    /*margin-bottom: 15px;*/
+    /*margin-top: 15px;*/
+    /*padding: 10px;*/
+    /*background: white;*/
+    /*height: 200px;*/
+    /*width: 100%;*/
+    /*border: 1px solid black;*/
+    /*overflow: auto;*/
+    /*color: black;*/
+/*}*/
 
-#messageInput {
-    width: 180px;
-    height: 28px;
-    border: 1px solid black;
-    margin-bottom: 10px;
-}
+/*#messageInput {*/
+    /*width: 180px;*/
+    /*height: 28px;*/
+    /*border: 1px solid black;*/
+    /*margin-bottom: 10px;*/
+/*}*/
 
-.messages {
-    margin-top: -10px;
-}
+/*.messages {*/
+    /*margin-top: -10px;*/
+/*}*/
 
-#menu {
-    padding: 12.5px 25px 12.5px 25px;
-}
+/*#menu {*/
+    /*padding: 12.5px 25px 12.5px 25px;*/
+/*}*/
 
-.msgln {
-    margin: 0 0 2px 0;
-}
+/*.msgln {*/
+    /*margin: 0 0 2px 0;*/
+/*}*/
 
-/*#testbox {
-    justify-content: space-between;
-    margin: 0 auto;
-    background-color: yellow;
-}*/
+/*!*#testbox {*/
+    /*justify-content: space-between;*/
+    /*margin: 0 auto;*/
+    /*background-color: yellow;*/
+/*}*!*/
 
-.well {
-    width: 100%;
-    height: auto;
-    padding: 0px;
-}
+/*.well {*/
+    /*width: 100%;*/
+    /*height: auto;*/
+    /*padding: 0px;*/
+/*}*/
 
-#testdiv {
-    text-align: left;
-}
+/*#testdiv {*/
+    /*text-align: left;*/
+/*}*/
 
-#weather  {
-    position: absolute;
-    top:100px;
-    right: 100px;
+/*#weather  {*/
+    /*position: absolute;*/
+    /*top:100px;*/
+    /*right: 100px;*/
 
-}
+/*}*/
 
 
-.affix {
-    top:50px;
-    position: fixed;
+/*.affix {*/
+    /*top:50px;*/
+    /*position: fixed;*/
 
-#sqoot img{
-    height:100px ;
-    width: auto;
+/*#sqoot img{*/
+    /*height:100px ;*/
+    /*width: auto;*/
 
-}
+/*}*/

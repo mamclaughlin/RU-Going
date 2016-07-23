@@ -24,12 +24,13 @@
   "homepage": "https://github.com/mamclaughlin/RU-Going#readme",
   "dependencies": {
     "body-parser": "^1.15.1",
+    "bower": "^1.7.9",
     "express": "^4.13.4",
+    "method-override": "^2.3.6",
     "mongodb": "^2.1.18",
     "mongoose": "^4.5.2",
     "morgan": "^1.7.0",
-    "passport": "^0.3.2",
-    "bower": "^1.7.9"
+    "passport": "^0.3.2"
   },
   "devDependencies": {
     "bower": "^1.7.9",

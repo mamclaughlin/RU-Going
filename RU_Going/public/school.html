@@ -1,4 +1,4 @@
-!-- http://meet-you-there.herokuapp.com/ -->
+<!-- http://meet-you-there.herokuapp.com/ -->
 <!DOCTYPE html>
 <html lang="en" ng-app>
 <head>
@@ -15,38 +15,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>RU Going?</title>
     <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-​
+
     <!-- Resource CSS -->
     <link rel="stylesheet" href="libs/materialize/dist/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="libs/animate.css/animate.min.css">
 <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-​
+
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
           
-​
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-​
-​
+
+
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-​
+
     <link type="text/css" rel="stylesheet" href="./assets/css/materialize.min.css">
     <link type="text/css" rel="stylesheet" href="./assets/css/landing.css">
-​
-​
-​
+
+
+
 </head>
-​
+
 <body>
-​
-​
-​
+
+
+
+<div class="row">
+   <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12" style="background-color: yellow;">
+                    <div id="testdiv" class="animated fadeInDown">
+                        <!-- Things show here -->
+                    </div>
+    </div>
+
+</div>
+
 <div class="chat-container animate slideInDown">
     
  <div class="row">
@@ -54,14 +63,14 @@
           <div class="card">
             <div class="card-image">
              
-              <header class="card-title">Meet-U-There Chat</header>
+             
             </div>
             <div id="menu">
                 
             </div>
            <div class="chat-menu">
             <div class="card-content">
-​
+                <header class="card-title" style="color: black; text-align:center;">Meet-You-There Chat</header>
                <label for="nameInput" class="username">Username:</label>
               <input type='text' id='nameInput' placeholder='Enter a Username...'>
             </div>
@@ -75,18 +84,18 @@
         </div>
       </div>
     </div>
-​
-​
+
+
 </div>
-​
-​
-​
-​
-​
-​
-​
+
+
+
+
+
+
+
 <!--MENU-->
-<div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+<div class="fixed-action-btn vertical click-to-toggle" style="bottom: 45px; right: 24px;">
     <a class="btn-floating btn-large red">
       <i class="material-icons" id="burgerMenu">menu</i>
     </a>
@@ -97,47 +106,45 @@
       <li><a class="btn-floating blue"><i class="material-icons" href="./index.html">home</i></a></li>
     </ul>
   </div>
-​
-<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 center-align">
+
+<div class="eventsDiv">
                     <div id="testdiv" class="animated fadeInDown">
                         <!-- Things show here -->
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m6">
-                    <div class="card large"id="twitter">
-                   
-                        <!-- <h4>See What's Making News</h4> -->
-                        <a class="twitter-timeline" href="https://twitter.com/hashtag/RU_Going" data-widget-id="710949422897692672">#RU_Going</a>
-                        <br>
-                        <br>
-                        <script>
-                        ! function(d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0],
-                                p = /^http:/.test(d.location) ? 'http' : 'https';
-                            if (!d.getElementById(id)) {
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = p + "://platform.twitter.com/widgets.js";
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }
-                        }(document, "script", "twitter-wjs");
-                        </script>
+ </div>
+
+
+                    <div class="col s12 m9 ">
+                        <div class="card large" stlye="float:right;"id="twitter">
+                       
+                            <!-- <h4>See What's Making News</h4> -->
+                            <a class="twitter-timeline" href="https://twitter.com/hashtag/RU_Going" data-widget-id="710949422897692672">#RU_Going</a>
+                            <br>
+                            <br>
+                            <script>
+                            ! function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0],
+                                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                                if (!d.getElementById(id)) {
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = p + "://platform.twitter.com/widgets.js";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }
+                            }(document, "script", "twitter-wjs");
+                            </script>
+                        </div>
                     </div>
-                </div>
-                <br>
-                <br>
-            </div>
-        
-        </div>
-​
+               
+           
+
  <div class="row" id="createSection">
-        <div class="col s12 ">
+        <div class="col m9 ">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
-              <span class="card-title">Meet-U-There</span>
+              <span class="card-title">Meet-You-There</span>
               
-​
+
             <div class="modal-body">
                     <div class="form-group">
                         <!-- <div class="addEventForm"> -->
@@ -172,7 +179,7 @@
                     <br>
                     <label class="control-label animated fadeInDown" for="focusedInput">Tell us about it:</label>
                     
-​
+
                     <input class="form-control eventDescription animated fadeInDown" id="focusedInput" type="text" value="" placeholder="What's going down?">
                 </div>
                 <div class="modal-footer">
@@ -182,9 +189,9 @@
                    
                 </div>
             </div>
-​
-​
-​
+
+
+
             </div>
             <div class="card-action">
               <button type="button" class="close" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -193,15 +200,90 @@
         </div>
       </div>
             
-​
-​
-​
-​
-​
+
+
+
+
+
 </body>
-​
-​
-​
+
+
+
+
+
+
+
+
+
+<script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/materialize/dist/js/materialize.min.js"></script>
+
+    <!-- Angular Files -->
+    <script src="assets/javascript/app/app.js"></script>    
+
+    <script src="assets/javascript/logic.js"></script>
+    <script src="assets/javascript/javascript.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('.chat-container').hide();
+    $('#createSection').hide();
+    $('#twitter').hide();
+    $('#testdiv').show();
+});
+
+$('#chat-feed').click(function(){
+    $('.chat-container').show();
+    $('#twitter').hide();
+    $('#createSection').hide();
+});
+
+$('#burgerMenu').click(function(){
+    $('.chat-container').hide();
+    $('#twitter').hide();
+    $('createSection').hide();
+});
+
+$('#twitters-feed').click(function(){
+    $('.chat-container').hide();
+    $('#twitter').show();
+    $('#createSection').hide();
+})
+$('#addButton').click(function(){
+    $('#createSection').show();
+    $('.chat-container').hide();
+    $('#twitter').hide();
+})
+$('#addEvent').click(function(){
+    $('#createSection').hide();
+    $('#twitter').hide();
+
+})
+
+
+
+</script>
+
+
+
+
+
+
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular-route/angular-route.min.js"></script>
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/materialize/dist/js/materialize.min.js"></script>
+
+<!-- Angular Files -->
+<script src="assets/javascript/app/app.js"></script>
+
+<script src="assets/javascript/logic.js"></script>
+<script src="assets/javascript/javascript.js"></script>
+</body>
+
+</html>
 ​
 ​
 ​

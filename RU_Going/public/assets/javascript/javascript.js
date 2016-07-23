@@ -32,6 +32,24 @@ $( document ).ready(function() {
         });
     }); //end remove click function
 
+ref.orderByChild("eventName").on("child_added", function(snapshot) {
+		    // console.log(snapshot.key() + " is located: " + snapshot.val().location + " and is in this category: " +snapshot.val().category);
+
+		      var catSort = snapshot.val();
+
+		       //this will see if the second parameter category is found within the first query's results
+			      //if (catSort.category == category) {
+			      	    $('#testdiv').prepend("<div class='card small  col m4' style='margin: 15px; float: left;' id='"+ snapshot.key() +"'><span class='glyphicon glyphicon-remove'></span><div id='eventName'>" + "<h4><strong>" +"<br>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'><i class='tiny material-icons'>perm_contact_calendar</i> "+ snapshot.val().eventDate + " <span id='eventTime'> <i class='tiny material-icons'>av_timer</i>" + snapshot.val().eventTime + " </span></div><div id='eventDescription'> " + "<b>About the event:&nbsp;&nbsp;</b>" + snapshot.val().eventDescription + "</span></div></div>");
+
+
+			          console.log(catSort);
+
+
+			          //this will hide the form when a user clicks 'lets go' so that only the results will show up
+			          $('#inputSection').hide();
+		     	  //}//end if statement
+
+		 	 }); //end first parameter by location
 
 	//button to add your own event:
 	$('#addEvent').on('click', function (){
@@ -45,7 +63,6 @@ $( document ).ready(function() {
 	eventDate = $('.eventDate').val().trim();
 	eventTime = $('.eventTime').val().trim();
 	eventDescription = $('.eventDescription').val().trim()
-	category = $('.eventCat').val().trim()
 	location = $('.eventLocation').val().trim();
 	// newEvent = "newEvent";
 
@@ -56,7 +73,6 @@ $( document ).ready(function() {
 		eventDate: eventDate,
 		eventTime: eventTime,
 		eventDescription: eventDescription,
-		category: category,
 		location: location
 	})
 
@@ -66,45 +82,7 @@ $( document ).ready(function() {
 	$('.eventDate').val("");
 	$('.eventTime').val("");
 	$('.eventDescription').val("");
-	$('.category').val("");
 	$('.location').val("");
-
-
-
-
-			 var category = $('.eventCat').val();
-			 var location = $('.eventLocation').val();
-			 // searchEvents(location, category);
-			 // return false;
-
-			ref.orderByChild("location").equalTo(location).on("child_added", function(snapshot) {
-		    // console.log(snapshot.key() + " is located: " + snapshot.val().location + " and is in this category: " +snapshot.val().category);
-
-		      var catSort = snapshot.val();
-
-		       //this will see if the second parameter category is found within the first query's results
-			      if (catSort.category == category) {
-			      	    $('#testdiv').prepend("<div class='well' id='"+ snapshot.key() +"'><span class='glyphicon glyphicon-remove'></span><div id='eventName'>" + "<h4><strong>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'><span class='glyphicon glyphicon-calendar'></span> "+ snapshot.val().eventDate + " <span id='eventTime'> <span class='glyphicon glyphicon-time' aria-hidden='true'></span>" + snapshot.val().eventTime + " </span></div><div id='eventDescription'> " + "<b>About the event:&nbsp;&nbsp;</b>" + snapshot.val().eventDescription + " <div id='category'> " + "<b>Category:&nbsp;&nbsp;</b>" + snapshot.val().category + "<span id='location'> " + "<b>Campus:&nbsp;&nbsp;</b>" + snapshot.val().location + "</span></div></div>");
-
-
-			          console.log(catSort);
-
-
-			          //this will hide the form when a user clicks 'lets go' so that only the results will show up
-			          $('#inputSection').hide();
-		     	  }//end if statement
-
-		 	 }); //end first parameter by location
-
-
-
-
-
-
-	//closes modal --DONT NEED.
-	// $('#myModal').dialog('close');
-
-	// Don't refresh the page!
 	return false;
 
 	}); //end click Add Event
@@ -126,43 +104,6 @@ $( document ).ready(function() {
 		// console.log("Errors handled: " + errorObject.code);
 
 }); //end child added function
-
-
-
-    //click on find a hangout button to retrieve info based on two parameters of location/category
-	$('#findEvent').on('click', function(){
-// <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-
-			 var category = $('#selectCategory').val();
-			 var location = $('#selectLocation').val();
-			 // searchEvents(location, category);
-			 // return false;
-
-			var ref = new Firebase("https://rcb-mm-app.firebaseio.com/events");
-			ref.orderByChild("location").equalTo(location).on("child_added", function(snapshot) {
-		    // console.log(snapshot.key() + " is located: " + snapshot.val().location + " and is in this category: " +snapshot.val().category);
-
-		      var catSort = snapshot.val();
-
-		       //this will see if the second parameter category is found within the first query's results
-			      if (catSort.category == category) {
-
-			      	    $('#testdiv').prepend("<div class='well' id='"+ snapshot.key() +"'><span class='glyphicon glyphicon-remove'></span><div id='eventName'>" + "<h4><strong>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'><span class='glyphicon glyphicon-calendar'></span> "+ snapshot.val().eventDate + " <span id='eventTime'> <span class='glyphicon glyphicon-time' aria-hidden='true'></span>" + snapshot.val().eventTime + " </span></div><div id='eventDescription'> " + "<b>About the event:&nbsp;&nbsp;</b>" + snapshot.val().eventDescription + " <div id='category'> " + "<b>Category:&nbsp;&nbsp;</b>" + snapshot.val().category + "<span id='location'> " + "<b>Campus:&nbsp;&nbsp;</b>" + snapshot.val().location + "</span></div></div>");
-
-
-			          console.log(catSort);
-
-
-			          //this will hide the form when a user clicks 'lets go' so that only the results will show up
-			          $('#inputSection').hide();
-		     	  }//end if statement
-
-		 	 }); //end first parameter by location
-
-
-
-	});//end go button on click
 
 //AARON'S randomized deal thing
 

@@ -147,17 +147,18 @@
     /*width: 100%;*/
 /*}*/
 
-/*#wellContent {*/
-    /*line-height: 300%;*/
-/*}*/
+#wellContent {
+    line-height: 300%;*/
+}
 
-/*.well {*/
-    /*float: left;*/
+.card small {
+    
+    float: left;
 
-    /*margin-right: 15px;*/
-    /*line-height: 300%;*/
+    margin-right: 15px;
+    line-height: 300%;
 
-/*}*/
+}
 
 /*.required sup {*/
     /*color: red;*/
@@ -299,10 +300,17 @@
     /*padding: 0px;*/
 /*}*/
 
-/*#testdiv {*/
-    /*text-align: left;*/
-/*}*/
+#testdiv {
+    text-align: center;
+    height: 400px;
+    overflow: scroll;
+    float:left;
+ 
+}
 
+.eventsDiv{
+    left:500px;
+}
 /*#weather  {*/
     /*position: absolute;*/
     /*top:100px;*/

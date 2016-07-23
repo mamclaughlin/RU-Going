@@ -1,3 +1,36 @@
+$(document).ready(function(){
+    $('.chat-container').hide();
+    $('#createSection').hide();
+    $('#twitter').hide();
+});
+
+$('#chat-feed').click(function(){
+    $('.chat-container').show();
+    $('#twitter').hide();
+    $('#createSection').hide();
+});
+
+$('#burgerMenu').click(function(){
+    $('.chat-container').hide();
+    $('#twitter').hide();
+    $('createSection').hide();
+});
+
+$('#twitters-feed').click(function(){
+    $('.chat-container').hide();
+    $('#twitter').show();
+    $('#createSection').hide();
+})
+$('#addButton').click(function(){
+    $('#createSection').show();
+    $('chat-container').hide();
+    $('#twitter').hide();
+})
+
+
+
+
+
 //Hides Divs
 $("#createSection").hide();
 $("#eventDiv").hide();
@@ -51,7 +84,7 @@ $("#addEvent").click(function() {
     $("#eventDiv").show();
     $("#twitter").show();
     $("#testdiv").show();
-    $("#createSection").modal('hide');
+  //  $("#createSection").modal('hide');
     $("#close").click(function() {
         $("#findSection").hide();
         $("#createSection").hide();
@@ -77,7 +110,7 @@ $("#goButton").click(function() {
     console.log(this);
 
     //Clicking the button hides the input boxes and buttons, it'll show the event divs that will be dynamically created based on input.
-    $("#findSection").hide();
+   // $("#findSection").hide();
     //Shows eventDiv after submit is pressed.
     $("#eventDiv").show();
     //Find a way for specific content to show up based on inputs selected from the dropdown menu.

@@ -1,4 +1,4 @@
-var app = angular.module('rugoingApp', [])
+var app = angular.module('rugoingApp', ['ngRoute','appRoutes','ui.materialize']);
 
 app.controller('ruGoingController', function($scope, $http) {
      $scope.sendData = function() {
@@ -12,5 +12,7 @@ app.controller('ruGoingController', function($scope, $http) {
                 console.log('Error: ' + data);
             });
     };
-
+});
+app.controller('schoolController', function($scope, $http) {
+     
 });

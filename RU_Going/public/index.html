@@ -1,9 +1,8 @@
 <!-- http://meet-you-there.herokuapp.com/ -->
 <!DOCTYPE html>
 <html lang="en">
+ <base href="/">
 <head>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
     <!-- HTML Magic -->
     <meta charset="UTF-8">
     <!-- iPhone Optimization -->
@@ -36,29 +35,84 @@
 
 <body ng-app="rugoingApp">
 
-<div class="container" ng-controller="ruGoingController">
-        <div class="row">
-                <form>
-                    <div class="form-group" >
-                        <input type="text" class="form-control" placeholder="User Name" ng-model="formData.name">
-                    </div>
-                    <div class="form-group" >
-                        <input type="text" class="form-control" placeholder="Email Address" ng-model="formData.email">
-                    </div>      
-                        <button type="submit" class="btn btn-primary btn-lg red darken-4" ng-click="sendData()">Submit</button>
-                </form>
-        </div>
-    
- </div>
 
+<div class="container" >
+        <div class="row">
+            <div style="width:100%; border:1px solid black; background-color:#e9e9e9;margin:10px; font-weight:bold;padding:10px;">
+                <h1>RU GOING?</h1>
+                <p>Welcome to RU Going! Here you can create event,chat, and meet other students at your school.</p>
+            </div>
+             <a class='btn btn-primary btn-lg red darken-4 submit-button' href='#demoModal'  modal>
+                        Register</a>
+                          <a class='btn btn-primary btn-lg red darken-4 submit-button' href='#demoModal1'  modal>
+                        Sign In</a>
+               
+        </div>    
+ 
+<div id="demoModal1" class="modal">
+    <div class="modal-content">
+        <h4>Enter Email</h4>
+        <form>
+            <div class="form-group" style="width:500px;">
+               <input type="text" class="form-control email-validate" placeholder="Email" >
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat submit-form">Submit</a>
+    </div>
+</div>
+
+
+
+<div id="demoModal" class="modal" ng-controller="ruGoingController">
+    <div class="modal-content">
+        <h4>Enter School Information</h4>
+        
+  <div class="row">
+    <form class="col s12">
+        <form>
+            <div class="form-group" >
+               <input type="text" class="form-control" placeholder="User Name" ng-model="formData.name">
+            </div>
+            <div class="form-group" >
+                <input type="text" class="form-control" placeholder="Email Address" ng-model="formData.email">
+            </div> 
+            <div class="form-group" >
+                <input type="text" class="form-control" placeholder="Zip Code" ng-model="formData.zip">
+            </div>      
+            <div class="form-group" >
+                <input type="text" class="form-control" placeholder="Primary School Color Hexidecimal" ng-model="formData.colorone">
+            </div> 
+            <div class="form-group" >
+                <input type="text" class="form-control" placeholder="Secondary School Color Hexidecimal" ng-model="formData.colortwo">
+            </div> 
+            <div class="modal-footer">
+                <a  href="school.html" type="submit" class=" modal-action modal-close waves-effect waves-green btn-flat" ng-click="sendData()">Submit</a>
+            </div>
+        </form> 
+  </div>
+</div>
+
+</div>
+</div>
     <!-- JS -->
+     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/angular/angular.min.js"></script>
-    <script src="libs/angular-route/angular-route.min.js"></script>
-    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>   
     <script src="libs/materialize/dist/js/materialize.min.js"></script>
+    <script src="libs/angular-materialize/src/angular-materialize.js"></script>
 
     <!-- Angular Files -->
+    <script src="assets/javascript/app/appRoutes.js"></script>
     <script src="assets/javascript/app/app.js"></script>
+    <script type="text/javascript">
+        $('.submit-form').on('click', function(){
+            var email = $('.email-validate').val();
+            console.log(email);
+        });
+
+    </script>
 
 </body>
 

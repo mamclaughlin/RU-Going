@@ -34,29 +34,22 @@
 
 </head>
 
-<body>
+<body ng-app="rugoingApp">
 
-
+<div class="container" ng-controller="ruGoingController">
         <div class="row">
-
-            <form class="col s6 offset-s3">
-                <h1>Meet You There</h1>
-                <div class="input-field">
-                    <input class="userinput" id="UI" type="text">
-                    <label for="UI">Email</label>
-                </div>
-                <div class="input-field">
-                    <input id="password" type="password">
-                    <label for="password">Password</label>
-                </div>
-            </form>
-
+                <form>
+                    <div class="form-group" >
+                        <input type="text" class="form-control" placeholder="User Name" ng-model="formData.name">
+                    </div>
+                    <div class="form-group" >
+                        <input type="text" class="form-control" placeholder="Email Address" ng-model="formData.email">
+                    </div>      
+                        <button type="submit" class="btn btn-primary btn-lg red darken-4" ng-click="sendData()">Submit</button>
+                </form>
         </div>
-        <br>
-        <div class="center-align">
-            <a id="login" type="submit" class=" red darken-2 center-align waves-effect waves-light btn"><i class="material-icons left">input</i>LOGIN</a>
-            <a id="register" class="red darken-2 center-align waves-effect waves-light btn"><i class="material-icons right">supervisor_account</i>REGISTER</a>
-        </div>
+    
+ </div>
 
     <!-- JS -->
     <script src="libs/angular/angular.min.js"></script>
@@ -67,8 +60,6 @@
     <!-- Angular Files -->
     <script src="assets/javascript/app/app.js"></script>
 
-    <script src="assets/javascript/logic.js"></script>
-    <script src="assets/javascript/javascript.js"></script>
 </body>
 
 </html>

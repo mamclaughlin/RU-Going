@@ -159,5 +159,3 @@ messagesRef.limitToLast(10).on('child_added', function(snapshot) {
     messageList[0].scrollTop = messageList[0].scrollHeight;
 
 });
-
-

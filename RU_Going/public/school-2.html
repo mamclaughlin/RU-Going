@@ -37,6 +37,11 @@
 
     <link type="text/css" rel="stylesheet" href="./assets/css/landing.css">
 
+    <style>
+        .lighten {
+        @extend .lighten-4;
+        }
+    </style>
 
 </head>
 
@@ -115,7 +120,7 @@
 
 
                     <div class="col s12 m9 ">
-                        <div class="card large" style="float:left;"id="twitter">
+                        <div class="card large" style="float: left;"id="twitter">
                        
                             <!-- <h4>See What's Making News</h4> -->
                             <a class="twitter-timeline" href="https://twitter.com/hashtag/RU_Going" data-widget-id="710949422897692672">#RU_Going</a>
@@ -272,13 +277,7 @@ $.getJSON('/api/entries', function(data) {
     console.log(color2);
     console.log(school);
 
-    function signin(school,color1,color2){
 
-        $("#title").append(school);
-        $("body").css({"background-color": color1});
-
-        $("#title").css({"color": color2});
-    };
 
     function signup(school,color1,color2){
         $("#title").append(school);
@@ -292,8 +291,41 @@ $.getJSON('/api/entries', function(data) {
 
 
 
+
 });
 
+$(document).ready(function(){
+    var emailInput =  location.search;
+    var emailRemove = emailInput.replace("?EmailAddress=","")
+    var emailChange = emailRemove.replace("%40", "@");
+//console.log(emailChange);
+
+
+
+    $.getJSON('/api/entries', function(data) {
+
+
+        var obj = data.filter(function ( obj ) {
+            return obj.email === emailChange;
+        })[0];
+
+        var colorone = obj['colorone'];
+        var colortwo = obj['colortwo'];
+        var school = obj['school'];
+        var email = obj['email'];
+        var name = obj['name'];
+        var zip = obj['zip'];
+        console.log(colorone);
+        function signup(school,color1,color2){
+            $("#title").append(school);
+//        $("body").css({"background-color": color1});
+            $("body").addClass(color1);
+            $("#title").css({"color": color2});
+        };
+
+        signup(school, color1, color2);
+    });
+});
 
 </script>
 

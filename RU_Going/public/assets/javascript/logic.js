@@ -51,7 +51,7 @@ $("#addEvent").click(function() {
     $("#eventDiv").show();
     $("#twitter").show();
     $("#testdiv").show();
-    $("#createSection").modal('hide');
+    // $("#createSection").modal('hide');
     $("#close").click(function() {
         $("#findSection").hide();
         $("#createSection").hide();

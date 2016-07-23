@@ -1,9 +1,8 @@
 <!-- http://meet-you-there.herokuapp.com/ -->
 <!DOCTYPE html>
 <html lang="en">
+ <base href="/">
 <head>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
     <!-- HTML Magic -->
     <meta charset="UTF-8">
     <!-- iPhone Optimization -->
@@ -45,17 +44,27 @@
                     <div class="form-group" >
                         <input type="text" class="form-control" placeholder="Email Address" ng-model="formData.email">
                     </div>      
-                        <button type="submit" class="btn btn-primary btn-lg red darken-4" ng-click="sendData()">Submit</button>
+                    
+                        <a class='btn btn-primary btn-lg red darken-4 submit-button' href='#demoModal' ng-click="sendData()" modal>
+                        Submit</a>
                 </form>
-        </div>
-    
+        </div>    
  </div>
-
+<div id="demoModal" class="modal">
+    <div class="modal-content">
+        <h4>Modal header</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
     <!-- JS -->
+     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/angular/angular.min.js"></script>
-    <script src="libs/angular-route/angular-route.min.js"></script>
-    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>   
     <script src="libs/materialize/dist/js/materialize.min.js"></script>
+    <script src="libs/angular-materialize/src/angular-materialize.js"></script>
 
     <!-- Angular Files -->
     <script src="assets/javascript/app/app.js"></script>

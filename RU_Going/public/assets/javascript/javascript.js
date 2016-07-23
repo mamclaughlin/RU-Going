@@ -39,10 +39,10 @@ ref.orderByChild("eventName").on("child_added", function(snapshot) {
 
 		       //this will see if the second parameter category is found within the first query's results
 			      //if (catSort.category == category) {
-			      	    $('#testdiv').prepend("<div class='card small  col m4' style='margin: 15px; float: left;' id='"+ snapshot.key() +"'><span class='glyphicon glyphicon-remove'></span><div id='eventName'>" + "<h4><strong>" +"<br>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'><i class='tiny material-icons'>perm_contact_calendar</i> "+ snapshot.val().eventDate + " <span id='eventTime'> <i class='tiny material-icons'>av_timer</i>" + snapshot.val().eventTime + " </span></div><div id='eventDescription'> " + "<b>About the event:&nbsp;&nbsp;</b>" + snapshot.val().eventDescription + "</span></div></div>");
+			      	    $('#testdiv').prepend("<div class='card medium  col m2' style='margin: 15px; float: left; align: center;' id='"+ snapshot.key() +"'><span class='glyphicon glyphicon-remove'></span><div id='eventName'>" + "<h4><strong>" +"<br>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'><i class='tiny material-icons'>perm_contact_calendar</i> "+ snapshot.val().eventDate + " <span id='eventTime'> <i class='tiny material-icons'>av_timer</i>" + snapshot.val().eventTime + " </span></div><div id='eventDescription'> " + "<b>About the event:&nbsp;&nbsp;</b>" + snapshot.val().eventDescription + "</span></div></div>");
 
 
-			          console.log(catSort);
+			          // console.log(catSort);
 
 
 			          //this will hide the form when a user clicks 'lets go' so that only the results will show up
@@ -91,12 +91,12 @@ ref.orderByChild("eventName").on("child_added", function(snapshot) {
  //whenever change made, console logs a snapshot
  eventsRef.on("child_added", function(childSnapshot) {
 	// Log everything that's coming out of snapshot
-	console.log(childSnapshot.val().eventName);
-	console.log(childSnapshot.val().eventDate);
-	console.log(childSnapshot.val().eventTime);
-	console.log(childSnapshot.val().eventDescription);
-	console.log(childSnapshot.val().category);
-	console.log(childSnapshot.val().location)
+	// console.log(childSnapshot.val().eventName);
+	// console.log(childSnapshot.val().eventDate);
+	// console.log(childSnapshot.val().eventTime);
+	// console.log(childSnapshot.val().eventDescription);
+	// console.log(childSnapshot.val().category);
+	// console.log(childSnapshot.val().location)
 
 
 	// Handle the errors

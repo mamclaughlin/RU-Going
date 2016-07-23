@@ -25,8 +25,10 @@ app.use(express.static(__dirname + '/RU_Going/public'));
  var entry = mongoose.model('entry', {
         name : String,        
         email: String,
-        phone: String, 
-        message: String
+        school : String,        
+        zip: String,
+        colorone : String,        
+        colortwo: String
     });
 
 
@@ -54,8 +56,10 @@ app.get('/api/entries', function(req, res) {
         entry.create({
             name : req.body.name,        
             email: req.body.email,
-            phone: req.body.phone, 
-            message: req.body.message,
+            school : req.body.school,        
+            zip: req.body.zip,
+            colorone : req.body.colorone,        
+            colortwo: req.body.colortwo,
             done : false
         }, function(err, todo) {
             if (err)

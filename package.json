@@ -28,7 +28,7 @@
     "express": "^4.13.4",
     "method-override": "^2.3.6",
     "mongodb": "^2.1.18",
-    "mongoose": "^4.5.2",
+    "mongoose": "^5.7.6",
     "morgan": "^1.7.0",
     "passport": "^0.3.2"
   },
